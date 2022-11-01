@@ -30,7 +30,7 @@ class Solution {
             if(arr[i]-temp >= dist)
             {
                 temp=arr[i];
-                count ++ ;
+                count++ ;
             }
             if(count == balls)
                 return true;
