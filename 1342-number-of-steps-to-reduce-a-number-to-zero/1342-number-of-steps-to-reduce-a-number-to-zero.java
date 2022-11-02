@@ -7,7 +7,7 @@ class Solution {
     }
     static int helper(int num,int steps)
     {
-       if(num == 0)
+        if(num == 0)
            return steps;
         
         if(num %2 == 0)
