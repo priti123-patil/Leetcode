@@ -13,7 +13,7 @@ class Solution {
 				int res = 0;
 				while (l <= h) 
                 {
-					int mid = (l + h);
+					int mid = (l + h)/2;
 					if (mat[i][mid] == 1) 
                     {
 						res = mid;
