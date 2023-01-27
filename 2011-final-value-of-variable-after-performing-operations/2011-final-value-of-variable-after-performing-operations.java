@@ -1,20 +1,13 @@
 class Solution {
     public int finalValueAfterOperations(String[] operations) {
         int ans=0;
-        
-        for(String s: operations)
+        for(int i=0;i<operations.length;i++)
         {
-            if(s.equals("X++")){
+            if(operations[i].charAt(1) == '+'){
                 ans++;
             }
-            else if(s.equals("X--")){
+            else{
                 ans--;
-            }
-            else if(s.equals("++X")){
-                ++ans;
-            }
-            else if(s.equals("--X")){
-                --ans;
             }
         }
         return ans;
