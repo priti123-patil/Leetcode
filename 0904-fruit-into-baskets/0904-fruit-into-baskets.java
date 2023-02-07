@@ -13,14 +13,14 @@ class Solution {
         int i=0,j=0,max=0;
         for(j=0;j<fruits.length;j++){
             basket.put(fruits[j], basket.getOrDefault(fruits[j],0)+1);
-            if(basket.size() > 2){
+            while(basket.size() > 2){
                 basket.put(fruits[i] , basket.get(fruits[i])-1);//reducethe ith keys value by 1 as we areincrementingi
-            if(basket.get(fruits[i]) == 0)
-                basket.remove(fruits[i]);
-            i++;
+                if(basket.get(fruits[i]) == 0)
+                    basket.remove(fruits[i]);
+                i++;
             }
+            max = Math.max(max,j-i+1);
         }
-        max= j-i;
         return max;
     }
 }
