@@ -1,23 +1,14 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
         int n = nums.length;
-        
-        if(n == 1)
-            return nums[0];
-        
-        if(nums[0] != nums[1])
-            return nums[0];
-        
-        if(nums[n-1] != nums[n-2])
-            return nums[n-1];
-        
-        for(int i=0;i<nums.length-1;i+=2)
-        {
-            if(nums[i] != nums[i+1])
-            {
-                return nums[i];
-            }
+        int l=0,h=n-1,mid=0;
+        while(l < h){
+            mid = (l + h)/2;
+            if( (mid % 2 == 0 && nums[mid] == nums[mid +1]) || (mid %2 == 1 && nums[mid] == nums[mid - 1]) )
+                l = mid + 1;
+            else
+                h = mid;
         }
-        return -1;
+        return nums[l];
     }
 }
