@@ -10,10 +10,10 @@ class Solution {
             sum+=i;
         }
         //binary search
-        int left=maxweight;
-        int right=sum;
+        int left = maxweight;
+        int right = sum;
         
-        while(left<right)
+        while(left < right)
         {
             int mid=left+(right-left)/2;
             if(possible(mid,days,weights))
